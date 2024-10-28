@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "523c2f6b-8e45-476a-bb19-ed67a115e7bc",
+		"name": "[vtb][openshift] Homework1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/public/items",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Hello, {{$randomFirstName}}\",\n    \"uid\": \"{{$randomUUID}}\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/public/items",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/public/items/:uid",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"public",
+						"items",
+						":uid"
+					],
+					"variable": [
+						{
+							"key": "uid",
+							"value": "8f0c8cbb-0605-4644-806c-c61bd362b202",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
