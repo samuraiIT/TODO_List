@@ -1,7 +1,0 @@
-You are installing {{ .Chart.Name }}.
-
-Created Database {{ .Values.database.default.name }} with user {{ .Values.database.default.user }}
-and password {{ .Values.database.default.password }}.
-
-You can't use Postgres:13 from Docker Registry because OpenShift started deployment from another user and
-initdb command required the same user as data directory.

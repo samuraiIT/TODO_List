@@ -1,7 +1,0 @@
-port: 8080
-profile: k8s
-fqdn: todo-list.apps.lab.inno.tech
-path: /backend
-image:
-  name: romanowalex/backend-todo-list
-  version: v1.0-lecture

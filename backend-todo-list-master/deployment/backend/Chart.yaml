@@ -1,4 +1,0 @@
-apiVersion: v2
-name: backend
-type: application
-version: 1.0.0

@@ -1,0 +1,27 @@
+spring:
+  application.name: todo-list
+  main.banner-mode: off
+  profiles.active: local
+
+server:
+  port: 8080
+  forward-headers-strategy: framework
+  servlet:
+    session:
+      cookie:
+        http-only: off
+        max-age: 86400
+
+management:
+  endpoints:
+    web:
+      base-path: /manage
+      exposure.include: info,health,loggers
+  health:
+    diskspace.enabled: false
+  endpoint:
+    health.show-details: always
+
+springdoc:
+  paths-to-match: /api/**
+  api-docs.path: /api-docs

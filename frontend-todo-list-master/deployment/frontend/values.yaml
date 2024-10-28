@@ -1,5 +1,0 @@
-port: 8080
-fqdn: todo-list.apps.edu.inno.tech
-image:
-  name: romanowalex/frontend-todo-list
-  version: v1.0-lecture
