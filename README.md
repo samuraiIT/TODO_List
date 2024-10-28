@@ -10,9 +10,7 @@
 
 4) Backend для хранения данных использует PostgreSQL 13.
 
-5) Frontend мапится наружу на порт 3000, запросы к backend пробрасываются
-
-через proxy_pass http://backend-service:8080. 
+5) Frontend мапится наружу на порт 3000, запросы к backend пробрасываются через proxy_pass http://backend-service:8080. 
 
 Требования
 1) Для успешного выполнения задания нужно установить на host машину:
